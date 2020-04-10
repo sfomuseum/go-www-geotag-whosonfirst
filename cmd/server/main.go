@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "github.com/sfomuseum/go-www-sfomuseum-geotag/writer"
+	_ "github.com/sfomuseum/go-www-geotag-whosonfirst/writer"
 )
 
 import (

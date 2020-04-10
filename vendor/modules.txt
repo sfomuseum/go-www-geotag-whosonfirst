@@ -19,6 +19,8 @@ github.com/aws/aws-lambda-go/lambda/messages
 github.com/aws/aws-lambda-go/lambdacontext
 # github.com/jtacoma/uritemplates v1.0.0
 github.com/jtacoma/uritemplates
+# github.com/natefinch/atomic v0.0.0-20150920032501-a62ce929ffcc
+github.com/natefinch/atomic
 # github.com/patrickmn/go-cache v2.1.0+incompatible
 github.com/patrickmn/go-cache
 # github.com/paulmach/orb v0.1.6
@@ -45,14 +47,23 @@ github.com/sfomuseum/go-www-geotag/www
 github.com/tidwall/gjson
 # github.com/tidwall/match v1.0.1
 github.com/tidwall/match
-# github.com/tidwall/pretty v1.0.0
+# github.com/tidwall/pretty v1.0.1
 github.com/tidwall/pretty
+# github.com/tidwall/sjson v1.1.1
+github.com/tidwall/sjson
 # github.com/whosonfirst/algnhsa v0.1.0
 github.com/whosonfirst/algnhsa
 # github.com/whosonfirst/go-bindata-assetfs v1.0.1
 github.com/whosonfirst/go-bindata-assetfs
 # github.com/whosonfirst/go-cache v0.0.2
 github.com/whosonfirst/go-cache
+# github.com/whosonfirst/go-whosonfirst-sources v0.1.0
+github.com/whosonfirst/go-whosonfirst-sources
+github.com/whosonfirst/go-whosonfirst-sources/sources
+# github.com/whosonfirst/go-whosonfirst-uri v0.2.0
+github.com/whosonfirst/go-whosonfirst-uri
+# github.com/whosonfirst/go-writer v0.1.0
+github.com/whosonfirst/go-writer
 # golang.org/x/net v0.0.0-20190628185345-da137c7871d7
 golang.org/x/net/html
 golang.org/x/net/html/atom
