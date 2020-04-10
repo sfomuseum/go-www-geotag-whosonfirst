@@ -35,7 +35,7 @@ github.com/sfomuseum/go-http-leaflet-geotag
 github.com/sfomuseum/go-http-tilezen/http
 # github.com/sfomuseum/go-tilezen v0.0.3
 github.com/sfomuseum/go-tilezen
-# github.com/sfomuseum/go-www-geotag v0.0.0-20200410184804-adea944aaf7a
+# github.com/sfomuseum/go-www-geotag v0.0.0-20200410223247-32220fdccf66
 github.com/sfomuseum/go-www-geotag/app
 github.com/sfomuseum/go-www-geotag/assets/templates
 github.com/sfomuseum/go-www-geotag/flags
@@ -51,12 +51,16 @@ github.com/tidwall/match
 github.com/tidwall/pretty
 # github.com/tidwall/sjson v1.1.1
 github.com/tidwall/sjson
+# github.com/tomtaylor/go-whosonfirst-format v0.2.0
+github.com/tomtaylor/go-whosonfirst-format
 # github.com/whosonfirst/algnhsa v0.1.0
 github.com/whosonfirst/algnhsa
 # github.com/whosonfirst/go-bindata-assetfs v1.0.1
 github.com/whosonfirst/go-bindata-assetfs
 # github.com/whosonfirst/go-cache v0.0.2
 github.com/whosonfirst/go-cache
+# github.com/whosonfirst/go-reader v0.1.1
+github.com/whosonfirst/go-reader
 # github.com/whosonfirst/go-whosonfirst-sources v0.1.0
 github.com/whosonfirst/go-whosonfirst-sources
 github.com/whosonfirst/go-whosonfirst-sources/sources
