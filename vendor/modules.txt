@@ -1,3 +1,9 @@
+# github.com/aaronland/go-artisanal-integers v0.1.1
+github.com/aaronland/go-artisanal-integers
+# github.com/aaronland/go-artisanal-integers-proxy v0.2.0
+github.com/aaronland/go-artisanal-integers-proxy/service
+# github.com/aaronland/go-brooklynintegers-api v1.1.0
+github.com/aaronland/go-brooklynintegers-api
 # github.com/aaronland/go-http-bootstrap v0.0.5
 github.com/aaronland/go-http-bootstrap
 github.com/aaronland/go-http-bootstrap/resources
@@ -9,8 +15,16 @@ github.com/aaronland/go-http-rewrite
 github.com/aaronland/go-http-server
 # github.com/aaronland/go-http-tangramjs v0.0.6
 github.com/aaronland/go-http-tangramjs
+# github.com/aaronland/go-pool v0.0.0-20191128211702-88306299c758
+github.com/aaronland/go-pool
 # github.com/aaronland/go-roster v0.0.1
 github.com/aaronland/go-roster
+# github.com/aaronland/go-string v0.1.1
+github.com/aaronland/go-string/random
+# github.com/aaronland/go-uid v0.0.2
+github.com/aaronland/go-uid
+# github.com/aaronland/go-uid-artisanal v0.0.0-20191128230022-67bc446aa49d
+github.com/aaronland/go-uid-artisanal
 # github.com/aws/aws-lambda-go v1.10.0
 github.com/aws/aws-lambda-go/events
 github.com/aws/aws-lambda-go/lambda
@@ -27,15 +41,17 @@ github.com/patrickmn/go-cache
 github.com/paulmach/orb
 github.com/paulmach/orb/clip
 github.com/paulmach/orb/geojson
+github.com/paulmach/orb/internal/length
 github.com/paulmach/orb/internal/mercator
 github.com/paulmach/orb/maptile
+github.com/paulmach/orb/planar
 # github.com/sfomuseum/go-http-leaflet-geotag v0.0.0-20200408190951-bda80bdc83f4
 github.com/sfomuseum/go-http-leaflet-geotag
 # github.com/sfomuseum/go-http-tilezen v0.0.4
 github.com/sfomuseum/go-http-tilezen/http
 # github.com/sfomuseum/go-tilezen v0.0.3
 github.com/sfomuseum/go-tilezen
-# github.com/sfomuseum/go-www-geotag v0.0.0-20200410223247-32220fdccf66
+# github.com/sfomuseum/go-www-geotag v0.0.0-20200410231055-3d2ae9412e8c
 github.com/sfomuseum/go-www-geotag/app
 github.com/sfomuseum/go-www-geotag/assets/templates
 github.com/sfomuseum/go-www-geotag/flags
@@ -61,6 +77,14 @@ github.com/whosonfirst/go-bindata-assetfs
 github.com/whosonfirst/go-cache
 # github.com/whosonfirst/go-reader v0.1.1
 github.com/whosonfirst/go-reader
+# github.com/whosonfirst/go-whosonfirst-export v0.3.1
+github.com/whosonfirst/go-whosonfirst-export
+github.com/whosonfirst/go-whosonfirst-export/options
+github.com/whosonfirst/go-whosonfirst-export/properties
+# github.com/whosonfirst/go-whosonfirst-id v0.0.2
+github.com/whosonfirst/go-whosonfirst-id
+# github.com/whosonfirst/go-whosonfirst-log v0.1.0
+github.com/whosonfirst/go-whosonfirst-log
 # github.com/whosonfirst/go-whosonfirst-sources v0.1.0
 github.com/whosonfirst/go-whosonfirst-sources
 github.com/whosonfirst/go-whosonfirst-sources/sources
