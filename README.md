@@ -1,4 +1,4 @@
-# go-www-whosonfirst-geotag
+# go-www-geotag-whosonfirst
 
 Work in progress.
 
