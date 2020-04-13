@@ -24,7 +24,7 @@ import (
 
 const GEOTAG_NS string = "geotag"
 const GEOTAG_SRC string = "geotag"
-const GEOTAG_LABEL string = "fov" // field of view
+const GEOTAG_LABEL string = "geotag-fov" // field of view
 
 func init() {
 	ctx := context.Background()
@@ -316,6 +316,7 @@ func FormatAltFeature(f *WhosOnFirstAltFeature) ([]byte, error) {
 	// (20200413/thisisaaronland)
 
 	ff := &format.Feature{
+		Type:       f.Type,
 		ID:         f.Id,
 		Properties: f.Properties,
 		Geometry:   f.Geometry,
