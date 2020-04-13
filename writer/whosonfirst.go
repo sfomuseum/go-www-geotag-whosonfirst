@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/sfomuseum/go-www-geotag/geojson"
+	"github.com/sfomuseum/go-geojson-geotag"
 	geotag_writer "github.com/sfomuseum/go-www-geotag/writer"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
@@ -108,7 +108,7 @@ func NewWhosOnFirstGeotagWriter(ctx context.Context, uri string) (geotag_writer.
 	return wr, nil
 }
 
-func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string, geotag_f *geojson.GeotagFeature) error {
+func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string, geotag_f *geotag.GeotagFeature) error {
 
 	// for local debugging
 	// uri = "1511948897"

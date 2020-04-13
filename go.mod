@@ -3,7 +3,8 @@ module github.com/sfomuseum/go-www-geotag-whosonfirst
 go 1.12
 
 require (
-	github.com/sfomuseum/go-www-geotag v0.0.0-20200410231055-3d2ae9412e8c
+	github.com/sfomuseum/go-geojson-geotag v0.0.1
+	github.com/sfomuseum/go-www-geotag v0.0.0-20200413180115-389ef7ae07a0
 	github.com/tidwall/gjson v1.6.0
 	github.com/tidwall/sjson v1.1.1
 	github.com/tomtaylor/go-whosonfirst-format v0.2.0
