@@ -99,7 +99,7 @@ func staticJavascriptGeotagApiJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/javascript/geotag.api.js", size: 1690, mode: os.FileMode(420), modTime: time.Unix(1586540388, 0)}
+	info := bindataFileInfo{name: "static/javascript/geotag.api.js", size: 1690, mode: os.FileMode(420), modTime: time.Unix(1586547389, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -159,7 +159,7 @@ func staticJavascriptGeotagEditorInitJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/javascript/geotag.editor.init.js", size: 2511, mode: os.FileMode(420), modTime: time.Unix(1586540388, 0)}
+	info := bindataFileInfo{name: "static/javascript/geotag.editor.init.js", size: 2511, mode: os.FileMode(420), modTime: time.Unix(1586547389, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -279,7 +279,7 @@ func staticJavascriptGeotagWriterInitJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/javascript/geotag.writer.init.js", size: 644, mode: os.FileMode(420), modTime: time.Unix(1586540388, 0)}
+	info := bindataFileInfo{name: "static/javascript/geotag.writer.init.js", size: 644, mode: os.FileMode(420), modTime: time.Unix(1586547389, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -299,7 +299,7 @@ func staticJavascriptGeotagWriterJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/javascript/geotag.writer.js", size: 291, mode: os.FileMode(420), modTime: time.Unix(1586540388, 0)}
+	info := bindataFileInfo{name: "static/javascript/geotag.writer.js", size: 291, mode: os.FileMode(420), modTime: time.Unix(1586547389, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -339,7 +339,7 @@ func staticCssEditorCss() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/css/editor.css", size: 179, mode: os.FileMode(420), modTime: time.Unix(1586540388, 0)}
+	info := bindataFileInfo{name: "static/css/editor.css", size: 179, mode: os.FileMode(420), modTime: time.Unix(1586547389, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -399,7 +399,7 @@ func staticCssWriterCss() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/css/writer.css", size: 31, mode: os.FileMode(420), modTime: time.Unix(1586540388, 0)}
+	info := bindataFileInfo{name: "static/css/writer.css", size: 31, mode: os.FileMode(420), modTime: time.Unix(1586547389, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }

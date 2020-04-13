@@ -160,22 +160,36 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 
 	//
 
+	pov, err := geotag_f.PointOfView()
+
+	if err != nil {
+		return err
+	}
+
+	tgt, err := geotag_f.Target()
+
+	if err != nil {
+		return err
+	}
+
+	pov_coords := pov.Coordinates
+	tgt_coords := tgt.Coordinates
+
 	geotag_props := geotag_f.Properties
 
 	alt_props := map[string]interface{}{
-		"wof:id":        wof_id,
-		"wof:repo":      main_repo,
-		"src:alt_label": GEOTAG_LABEL,
-		"src:geom":      wr.geom_source,
+		"wof:id":                  wof_id,
+		"wof:repo":                main_repo,
+		"src:alt_label":           GEOTAG_LABEL,
+		"src:geom":                wr.geom_source,
+		"geotag:angle":            geotag_props.Angle,
+		"geotag:bearing":          geotag_props.Bearing,
+		"geotag:distance":         geotag_props.Distance,
+		"geotag:camera_longitude": pov_coords[0],
+		"geotag:camera_latitude":  pov_coords[1],
+		"geotag:target_longitude": tgt_coords[0],
+		"geotag:target_latitude":  tgt_coords[1],
 	}
-
-	ns_angle := fmt.Sprintf("%s:%s", GEOTAG_NS, "angle")
-	ns_bearing := fmt.Sprintf("%s:%s", GEOTAG_NS, "bearing")
-	ns_distance := fmt.Sprintf("%s:%s", GEOTAG_NS, "distance")
-
-	alt_props[ns_angle] = geotag_props.Angle
-	alt_props[ns_bearing] = geotag_props.Bearing
-	alt_props[ns_distance] = geotag_props.Distance
 
 	alt_geom, err := geotag_f.FieldOfView()
 
@@ -224,28 +238,21 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 
 	if wr.update {
 
-		pov, err := geotag_f.PointOfView()
-
-		if err != nil {
-			return err
-		}
-
 		main_body, err = sjson.SetBytes(main_body, "geometry", pov)
 
 		if err != nil {
 			return err
 		}
 
-		main_body, err = sjson.SetBytes(main_body, "properties.lbl:longitude", pov.Coordinates[0])
-
-		if err != nil {
-			return err
-		}
-
-		main_body, err = sjson.SetBytes(main_body, "properties.lbl:latitude", pov.Coordinates[1])
-
-		if err != nil {
-			return err
+		to_update := map[string]interface{}{
+			"lbl:longitude":           pov_coords[0],
+			"lbl:latitude":            pov_coords[1],
+			"geotag:camera_longitude": pov_coords[0],
+			"geotag:camera_latitude":  pov_coords[1],
+			"geotag:target_longitude": tgt_coords[0],
+			"geotag:target_latitude":  tgt_coords[1],
+			"geotag:angle":            geotag_props.Angle,
+			"src:geom":                wr.geom_source,
 		}
 
 		geom_alt := []string{
@@ -266,16 +273,16 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 			}
 		}
 
-		main_body, err = sjson.SetBytes(main_body, "properties.src:geom_alt", geom_alt)
+		to_update["src:geom_alt"] = geom_alt
 
-		if err != nil {
-			return err
-		}
+		for k, v := range to_update {
 
-		main_body, err = sjson.SetBytes(main_body, "properties.src:geom", wr.geom_source)
+			path := fmt.Sprintf("properties.%s", k)
+			main_body, err = sjson.SetBytes(main_body, path, v)
 
-		if err != nil {
-			return err
+			if err != nil {
+				return err
+			}
 		}
 
 		// please refactor everything about whosonfirst/go-whosonfirst-export...
