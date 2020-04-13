@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"bytes"
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/sfomuseum/go-geojson-geotag"
@@ -25,11 +24,21 @@ import (
 
 const GEOTAG_NS string = "geotag"
 const GEOTAG_SRC string = "geotag"
-const GEOTAG_LABEL string = "geotag"
+const GEOTAG_LABEL string = "fov" // field of view
 
 func init() {
 	ctx := context.Background()
 	geotag_writer.RegisterWriter(ctx, "whosonfirst", NewWhosOnFirstGeotagWriter)
+}
+
+// please put this in a common whosonfirst geojson/feature package
+// (20200413/thisisaaronland)
+
+type WhosOnFirstAltFeature struct {
+	Id         int64                  `json:"id"`
+	Type       string                 `json:"type"`
+	Properties map[string]interface{} `json:"properties"`
+	Geometry   interface{}            `json:"geometry"`
 }
 
 type WhosOnFirstGeotagWriter struct {
@@ -113,7 +122,7 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 	// for local debugging
 	// uri = "1511948897"
 
-	id, uri_args, err := wof_uri.ParseURI(uri)
+	wof_id, uri_args, err := wof_uri.ParseURI(uri)
 
 	if err != nil {
 		return err
@@ -123,7 +132,7 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 		return errors.New("Alt files are not supported yet")
 	}
 
-	rel_path, err := wof_uri.Id2RelPath(id)
+	rel_path, err := wof_uri.Id2RelPath(wof_id)
 
 	if err != nil {
 		return err
@@ -151,48 +160,54 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 
 	//
 
-	geotag_body, err := json.Marshal(geotag_f)
+	geotag_props := geotag_f.Properties
+
+	alt_props := map[string]interface{}{
+		"wof:id":        wof_id,
+		"wof:repo":      main_repo,
+		"src:alt_label": GEOTAG_LABEL,
+		"src:geom":      wr.geom_source,
+	}
+
+	ns_angle := fmt.Sprintf("%s:%s", GEOTAG_NS, "angle")
+	ns_bearing := fmt.Sprintf("%s:%s", GEOTAG_NS, "bearing")
+	ns_distance := fmt.Sprintf("%s:%s", GEOTAG_NS, "distance")
+
+	alt_props[ns_angle] = geotag_props.Angle
+	alt_props[ns_bearing] = geotag_props.Bearing
+	alt_props[ns_distance] = geotag_props.Distance
+
+	alt_geom, err := geotag_f.FieldOfView()
 
 	if err != nil {
 		return err
 	}
 
-	alt_body, err := GeotagFeatureToAltFeature(ctx, uri, geotag_body)
-
-	if err != nil {
-		return err
-	}
-
-	alt_body, err = sjson.SetBytes(alt_body, "properties.wof:repo", main_repo)
-
-	if err != nil {
-		return err
-	}
-
-	alt_body, err = sjson.SetBytes(alt_body, "properties.src:geom", wr.geom_source)
-
-	if err != nil {
-		return err
-	}
-
-	alt_body, err = Format(alt_body)
-
-	if err != nil {
-		return err
+	alt_feature := &WhosOnFirstAltFeature{
+		Type:       "Feature",
+		Id:         wof_id,
+		Properties: alt_props,
+		Geometry:   alt_geom,
 	}
 
 	//
 
-	alt_geom := &wof_uri.AltGeom{
+	alt_body, err := FormatAltFeature(alt_feature)
+
+	if err != nil {
+		return err
+	}
+
+	alt_uri_geom := &wof_uri.AltGeom{
 		Source: GEOTAG_LABEL,
 	}
 
-	alt_args := &wof_uri.URIArgs{
+	alt_uri_args := &wof_uri.URIArgs{
 		IsAlternate: true,
-		AltGeom:     alt_geom,
+		AltGeom:     alt_uri_geom,
 	}
 
-	alt_uri, err := wof_uri.Id2RelPath(id, alt_args)
+	alt_uri, err := wof_uri.Id2RelPath(wof_id, alt_uri_args)
 
 	if err != nil {
 		return err
@@ -234,7 +249,7 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 		}
 
 		geom_alt := []string{
-			GEOTAG_SRC,
+			GEOTAG_LABEL,
 		}
 
 		geom_alt_rsp := gjson.GetBytes(main_body, "properties.src:geom_alt")
@@ -243,7 +258,7 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 
 			for _, r := range geom_alt_rsp.Array() {
 
-				if r.String() == GEOTAG_SRC {
+				if r.String() == GEOTAG_LABEL {
 					continue
 				}
 
@@ -290,86 +305,23 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 		if err != nil {
 			return err
 		}
-
 	}
 
 	return nil
 }
 
-func GeotagFeatureToAltFeature(ctx context.Context, uri string, body []byte) ([]byte, error) {
+func FormatAltFeature(f *WhosOnFirstAltFeature) ([]byte, error) {
 
-	id, _, err := wof_uri.ParseURI(uri)
+	// please standardize on a common whosonfirst geojson/feature package
+	// (20200413/thisisaaronland)
 
-	if err != nil {
-		return nil, err
+	ff := &format.Feature{
+		ID:         f.Id,
+		Properties: f.Properties,
+		Geometry:   f.Geometry,
 	}
 
-	to_ns := []string{
-		"angle",
-		"bearing",
-		"distance",
-	}
-
-	for _, k := range to_ns {
-
-		path_old := fmt.Sprintf("properties.%s", k)
-		path_ns := fmt.Sprintf("properties.%s:%s", GEOTAG_NS, k)
-
-		rsp := gjson.GetBytes(body, path_old)
-
-		if !rsp.Exists() {
-			msg := fmt.Sprintf("Missing '%s' property", path_old)
-			return nil, errors.New(msg)
-		}
-
-		body, err = sjson.DeleteBytes(body, path_old)
-
-		if err != nil {
-			return nil, err
-		}
-
-		body, err = sjson.SetBytes(body, path_ns, rsp.Float())
-
-		if err != nil {
-			return nil, err
-		}
-	}
-
-	body, err = sjson.SetBytes(body, "id", id)
-
-	if err != nil {
-		return nil, err
-	}
-
-	body, err = sjson.SetBytes(body, "properties.wof:id", id)
-
-	if err != nil {
-		return nil, err
-	}
-
-	body, err = sjson.SetBytes(body, "properties.src:alt_label", GEOTAG_LABEL)
-
-	if err != nil {
-		return nil, err
-	}
-
-	body, err = sjson.SetBytes(body, "properties.src:geom", GEOTAG_SRC)
-
-	if err != nil {
-		return nil, err
-	}
-
-	return body, nil
-}
-
-func Format(feature []byte) ([]byte, error) {
-
-	// TODO: Add FormatBytes to go-whosonfirst-feature
-
-	var f format.Feature
-	json.Unmarshal(feature, &f)
-
-	body, err := format.FormatFeature(&f)
+	body, err := format.FormatFeature(ff)
 
 	if err != nil {
 		return nil, err
