@@ -91,6 +91,8 @@ github.com/sfomuseum/go-www-geotag v0.0.0-20200414211239-a9db8cdf77ef h1:lNlXpRQ
 github.com/sfomuseum/go-www-geotag v0.0.0-20200414211239-a9db8cdf77ef/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
 github.com/sfomuseum/go-www-geotag v0.0.0-20200414212401-c0ef531264d8 h1:4UY6Jh59QcJFS3SsMRiqyv1bOsOtjKFxnvCoZmQt4Fw=
 github.com/sfomuseum/go-www-geotag v0.0.0-20200414212401-c0ef531264d8/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
+github.com/sfomuseum/go-www-geotag v0.0.0-20200414222300-e955a66018b9 h1:3iflxeEOG5mXSg6pJeN33jf+vwLG46rxv68iIjmKR7c=
+github.com/sfomuseum/go-www-geotag v0.0.0-20200414222300-e955a66018b9/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
