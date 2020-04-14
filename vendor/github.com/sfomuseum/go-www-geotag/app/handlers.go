@@ -6,24 +6,37 @@ import (
 	"flag"
 	"fmt"
 	"github.com/aaronland/go-http-bootstrap"
+	"github.com/aaronland/go-http-crumb"
 	"github.com/aaronland/go-http-tangramjs"
+	"github.com/aaronland/go-string/dsn"
+	"github.com/aaronland/go-string/random"
 	"github.com/jtacoma/uritemplates"
 	"github.com/sfomuseum/go-http-leaflet-geotag"
+	"github.com/sfomuseum/go-http-leaflet-layers"
 	tzhttp "github.com/sfomuseum/go-http-tilezen/http"
+	"github.com/sfomuseum/go-www-geotag/api"
 	"github.com/sfomuseum/go-www-geotag/flags"
 	"github.com/sfomuseum/go-www-geotag/geo"
 	"github.com/sfomuseum/go-www-geotag/writer"
 	"github.com/sfomuseum/go-www-geotag/www"
 	"github.com/whosonfirst/go-cache"
-	_ "log"
+	"log"
 	"net/http"
 	"net/url"
 	"strings"
+	"sync"
 	"time"
 )
 
+var crumb_init sync.Once
+
+var crumb_config *crumb.CrumbConfig
+var crumb_err error
+
 func init() {
-	geotag.INCLUDE_LEAFLET = false // because the tangramjs stuff will add it
+	// because the tangramjs stuff will add it
+	geotag.INCLUDE_LEAFLET = false
+	layers.INCLUDE_LEAFLET = false
 }
 
 func AppendAssetHandlers(ctx context.Context, fs *flag.FlagSet, mux *http.ServeMux) error {
@@ -46,6 +59,21 @@ func AppendAssetHandlers(ctx context.Context, fs *flag.FlagSet, mux *http.ServeM
 		return err
 	}
 
+	enable_map_layers, err := flags.BoolVar(fs, "enable-map-layers")
+
+	if err != nil {
+		return err
+	}
+
+	if enable_map_layers {
+
+		err = layers.AppendAssetHandlers(mux)
+
+		if err != nil {
+			return err
+		}
+	}
+
 	err = www.AppendStaticAssetHandlers(mux)
 
 	if err != nil {
@@ -64,6 +92,12 @@ func AppendEditorHandler(ctx context.Context, fs *flag.FlagSet, mux *http.ServeM
 	}
 
 	handler, err := NewEditorHandler(ctx, fs)
+
+	if err != nil {
+		return err
+	}
+
+	handler, err = AppendCrumbHandler(ctx, fs, handler)
 
 	if err != nil {
 		return err
@@ -171,6 +205,12 @@ func NewEditorHandler(ctx context.Context, fs *flag.FlagSet) (http.Handler, erro
 		return nil, err
 	}
 
+	enable_map_layers, err := flags.BoolVar(fs, "enable-map-layers")
+
+	if err != nil {
+		return nil, err
+	}
+
 	if enable_proxy_tiles {
 
 		path_proxy_tiles, err := flags.StringVar(fs, "path-proxy-tiles")
@@ -263,6 +303,11 @@ func NewEditorHandler(ctx context.Context, fs *flag.FlagSet) (http.Handler, erro
 	editor_handler = tangramjs.AppendResourcesHandler(editor_handler, tangramjs_opts)
 	editor_handler = geotag.AppendResourcesHandler(editor_handler, geotag_opts)
 
+	if enable_map_layers {
+		layers_opts := layers.DefaultLeafletLayersOptions()
+		editor_handler = layers.AppendResourcesHandler(editor_handler, layers_opts)
+	}
+
 	return editor_handler, nil
 }
 
@@ -295,6 +340,12 @@ func AppendWriterHandler(ctx context.Context, fs *flag.FlagSet, mux *http.ServeM
 		return err
 	}
 
+	handler, err = AppendCrumbHandler(ctx, fs, handler)
+
+	if err != nil {
+		return err
+	}
+
 	mux.Handle(path, handler)
 	return nil
 }
@@ -313,7 +364,7 @@ func NewWriterHandler(ctx context.Context, fs *flag.FlagSet) (http.Handler, erro
 		return nil, err
 	}
 
-	return www.WriterHandler(wr)
+	return api.WriterHandler(wr)
 }
 
 func AppendProxyTilesHandlerIfEnabled(ctx context.Context, fs *flag.FlagSet, mux *http.ServeMux) error {
@@ -410,4 +461,97 @@ func NewProxyTilesHandler(ctx context.Context, fs *flag.FlagSet) (http.Handler, 
 	}
 
 	return proxy_handler, nil
+}
+
+func AppendCrumbHandler(ctx context.Context, fs *flag.FlagSet, handler http.Handler) (http.Handler, error) {
+
+	crumb_dsn, err := flags.StringVar(fs, "crumb-dsn")
+
+	if err != nil {
+		return nil, err
+	}
+
+	if crumb_dsn == "disabled" {
+		log.Printf("[WARNING] -crumb-dsn explicitly disabled for %T.\n", handler)
+		return handler, nil
+	}
+
+	crumb_config, err := crumbConfigWithFlagSet(ctx, fs)
+
+	if err != nil {
+		return nil, err
+	}
+
+	handler = crumb.EnsureCrumbHandler(crumb_config, handler)
+	return handler, nil
+}
+
+func crumbConfigWithFlagSet(ctx context.Context, fs *flag.FlagSet) (*crumb.CrumbConfig, error) {
+
+	crumb_func := func() {
+
+		crumb_dsn, err := flags.StringVar(fs, "crumb-dsn")
+
+		if err != nil {
+			crumb_err = err
+			return
+		}
+
+		if crumb_dsn == "debug" {
+
+			r_opts := random.DefaultOptions()
+			r_opts.AlphaNumeric = true
+
+			s, err := random.String(r_opts)
+
+			if err != nil {
+				crumb_err = err
+				return
+			}
+
+			r_opts.Length = 8
+			e, err := random.String(r_opts)
+
+			if err != nil {
+				crumb_err = err
+				return
+			}
+
+			extra := e
+			separator := ":"
+			secret := s
+			ttl := "3600" // 60 * 60
+
+			crumb_dsn = fmt.Sprintf("extra=%s separator=%s secret=%s ttl=%s", extra, separator, secret, ttl)
+		}
+
+		dsn_map, err := dsn.StringToDSN(crumb_dsn)
+
+		if err != nil {
+			crumb_err = err
+			return
+		}
+
+		k, ok := dsn_map["key"]
+
+		if !ok || k == "" {
+			dsn_map["key"] = "geotag"
+		}
+
+		crumb_dsn = dsn_map.String()
+
+		crumb_config, crumb_err = crumb.NewCrumbConfigFromDSN(crumb_dsn)
+	}
+
+	crumb_init.Do(crumb_func)
+
+	if crumb_err != nil {
+		return nil, crumb_err
+	}
+
+	if crumb_config == nil {
+		return nil, errors.New("Failed to construct crumb config")
+	}
+
+	return crumb_config, nil
 }

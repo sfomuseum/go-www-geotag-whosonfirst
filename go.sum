@@ -8,11 +8,15 @@ github.com/aaronland/go-brooklynintegers-api v1.1.0 h1:eyoSZjn3Qiy79H+1rG/HtkESh
 github.com/aaronland/go-brooklynintegers-api v1.1.0/go.mod h1:agceH8JW8PcdHGCyKEDmOntccB3m7xUKrUejHpxAs6U=
 github.com/aaronland/go-http-bootstrap v0.0.5 h1:g6PehLzQcQjUiXQdYPrl3ZQuNRYTsR6kw9M7u83mI7U=
 github.com/aaronland/go-http-bootstrap v0.0.5/go.mod h1:r8XhNGVceWoc7iwamnU0IIw5RyNyfMmGvcxLA/lQfek=
+github.com/aaronland/go-http-crumb v0.0.5 h1:ZhBkvWUW9wsw+KYnOu0sHAeRpsfY9kj0wh7yA8qGA0M=
+github.com/aaronland/go-http-crumb v0.0.5/go.mod h1:tzp6zHKE/pojVXQhcS1J5x5qQkhhxOTvJS2N7S1VVuY=
 github.com/aaronland/go-http-leaflet v0.0.3 h1:moAjSThtakdpdZ9zr6po11XeIyksYfe+BaH+tfdrnsM=
 github.com/aaronland/go-http-leaflet v0.0.3/go.mod h1:jUzEnGKezjceuNtQJIZWy2nXMhuteRSK0BPIjSSniBw=
 github.com/aaronland/go-http-rewrite v0.0.3/go.mod h1:g62jjXpsArD0lzJLs9bVLR9Locdt3f4OmqFkkJL2rQU=
 github.com/aaronland/go-http-rewrite v0.0.4 h1:lI8cDF/nINjuSPrYpwvlJLa1cC32h1nvmBwRRHs9sow=
 github.com/aaronland/go-http-rewrite v0.0.4/go.mod h1:g62jjXpsArD0lzJLs9bVLR9Locdt3f4OmqFkkJL2rQU=
+github.com/aaronland/go-http-sanitize v0.0.1 h1:35rmeJh9Kx9mphGJXitQ6dOsC2fEPdn9sJa6JpYPd/c=
+github.com/aaronland/go-http-sanitize v0.0.1/go.mod h1:qUi4rzUPcpMntpUFnHK00yQI5vd/Q7x9MFYwX91/ygI=
 github.com/aaronland/go-http-server v0.0.0-20200406192045-de2f431abc6e h1:INXG9QbT9VzBS7k94MFRjbiCGXV87lMKJHwWXeMOOE8=
 github.com/aaronland/go-http-server v0.0.0-20200406192045-de2f431abc6e/go.mod h1:aLVlx8l+Tzrv1YmEDKKeomUj5vWzUfrbC1QB6WUxzN0=
 github.com/aaronland/go-http-tangramjs v0.0.6 h1:Ke2hU/flaO6hmK4AxH6ubKIEtqKItowqaWe4IA/3aFU=
@@ -24,6 +28,7 @@ github.com/aaronland/go-pool v0.0.0-20191128211702-88306299c758 h1:m/JUyvxsCbgOy
 github.com/aaronland/go-pool v0.0.0-20191128211702-88306299c758/go.mod h1:hL9EPOZJ6WVHaz7D0Jw1Dn1vaCOOSZNrYBTKMgDKYRk=
 github.com/aaronland/go-roster v0.0.1 h1:r1l4n1HfWvEtOXZvhfXX0Won9Xf6QJsigdUdzOtuy/M=
 github.com/aaronland/go-roster v0.0.1/go.mod h1:AcovpxlG1XxJxX2Fjqlm63fEIBhCjEIBV4lP87FZDmI=
+github.com/aaronland/go-string v0.1.0/go.mod h1:2aMIWdTqk63jZsaLLy+p9dsB1MDRqx4sHYoLtkwyYUo=
 github.com/aaronland/go-string v0.1.1 h1:btdr18owWCBN14ojKx3p+PBCKfm9qIggYEguPLUb2wE=
 github.com/aaronland/go-string v0.1.1/go.mod h1:2aMIWdTqk63jZsaLLy+p9dsB1MDRqx4sHYoLtkwyYUo=
 github.com/aaronland/go-uid v0.0.2 h1:5H3wtTBi58lkW5bqbaFR8Hp1MXfcraoJRlxKoUDeVfg=
@@ -62,6 +67,8 @@ github.com/sfomuseum/go-http-leaflet-geotag v0.0.0-20200408190951-bda80bdc83f4 h
 github.com/sfomuseum/go-http-leaflet-geotag v0.0.0-20200408190951-bda80bdc83f4/go.mod h1:R56pMAP2OHurz+bDFkYL3RgISj/SQw2mbgTmL9FZ8WQ=
 github.com/sfomuseum/go-http-leaflet-geotag v1.0.0 h1:LGW8CpUhwkQ7+4DewziLI5ueF1lUjOXY9v9Uywon8bA=
 github.com/sfomuseum/go-http-leaflet-geotag v1.0.0/go.mod h1:R56pMAP2OHurz+bDFkYL3RgISj/SQw2mbgTmL9FZ8WQ=
+github.com/sfomuseum/go-http-leaflet-layers v0.0.0-20200414210451-02713825ca94 h1:5xUNau9W+JYKE3ZLo/VgavjX3bNiqUO4gQPgqAVkj7c=
+github.com/sfomuseum/go-http-leaflet-layers v0.0.0-20200414210451-02713825ca94/go.mod h1:y44/bRbzZikkm26+0exD2nkJ8SGsOpQmXT1NM/R58iE=
 github.com/sfomuseum/go-http-tilezen v0.0.4 h1:VtgK1o0e4orgLthumMLZ3NcZHHJakixRMPphmSGiKDQ=
 github.com/sfomuseum/go-http-tilezen v0.0.4/go.mod h1:3KWUDN2cHiSWjRaI4wrt5FKa/EEsNcsOeh5GIgWTrBw=
 github.com/sfomuseum/go-tilezen v0.0.3 h1:B6BSBHTtno1MvtTMyNRhIK+MMaBQOml0AFoz+Uw8u5o=
@@ -80,6 +87,8 @@ github.com/sfomuseum/go-www-geotag v0.0.0-20200413204623-fc11e6f94f1d h1:iLRf6wG
 github.com/sfomuseum/go-www-geotag v0.0.0-20200413204623-fc11e6f94f1d/go.mod h1:9pMF8psqOoV8MJnSK6dzaTDa+8C6GXYcvMLuj3zgUMQ=
 github.com/sfomuseum/go-www-geotag v0.0.0-20200414002049-0d66988fb3a9 h1:XArYcj5I9eMcX0Su6FFiLEDS9mKqyMwYZ74cq7B4FMs=
 github.com/sfomuseum/go-www-geotag v0.0.0-20200414002049-0d66988fb3a9/go.mod h1:44J7K3LiS3CEz3RNlyXIUQJRuFmCZbnhAm9SDOWVtGg=
+github.com/sfomuseum/go-www-geotag v0.0.0-20200414211239-a9db8cdf77ef h1:lNlXpRQDk8KyHEkwYfd/ABGPScvGwsVdaJCziq7RRNw=
+github.com/sfomuseum/go-www-geotag v0.0.0-20200414211239-a9db8cdf77ef/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
@@ -108,6 +117,8 @@ github.com/whosonfirst/go-cache v0.0.2 h1:O6DxFeSkHPSCxmXSmsTX5tXCY8m/FStEPgglR/
 github.com/whosonfirst/go-cache v0.0.2/go.mod h1:SUK9m5/Dh2WvYGCtlu1Uxo1h+6VUaRra1QHaPSOF+gI=
 github.com/whosonfirst/go-reader v0.1.1 h1:0fXoYQR/Yyh3PKk+9Huwoc6dCAt8l1tjg2dEShjqcFI=
 github.com/whosonfirst/go-reader v0.1.1/go.mod h1:w0AeU+Ojyfmxb7r+rcSYyxpCxrhxlHv+D9EgEwQsqcM=
+github.com/whosonfirst/go-sanitize v0.1.0 h1:ygSqCnakwdzH/m8UEa15zXGDsoo5/JJeRkgmAjXZrBU=
+github.com/whosonfirst/go-sanitize v0.1.0/go.mod h1:p/emgbafMM0p5iVAz2XWwecYPl06Tw4Jos9rhTKIrt8=
 github.com/whosonfirst/go-whosonfirst-export v0.3.1 h1:oTAfaeUrIqx9RLjnlyVLfvPj36kHnx4DLYZr5yHsw+g=
 github.com/whosonfirst/go-whosonfirst-export v0.3.1/go.mod h1:UO/uZcV+kGoDZPYKSb05Yj28e1sk4r8aQvCyIjBQOxc=
 github.com/whosonfirst/go-whosonfirst-id v0.0.2 h1:MYtBPYtOND/KSLYeaoURWyh2OkyVqwpOXSuNj9vNf9Q=
