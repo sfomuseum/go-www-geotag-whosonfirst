@@ -56,6 +56,8 @@ github.com/sfomuseum/go-geojson-geotag v0.0.1 h1:tdcP9EIWHWbyQpsUuI2KMQdCY+NIMsl
 github.com/sfomuseum/go-geojson-geotag v0.0.1/go.mod h1:KC3HmXH9Aws5v5iPzCukiNGUlLfHITZAqFVLqvi2COg=
 github.com/sfomuseum/go-geojson-geotag v0.0.2 h1:2BOfA+0TWldxPewzxrjHgR7q6gYEEE4fhYZ6JURwS68=
 github.com/sfomuseum/go-geojson-geotag v0.0.2/go.mod h1:KC3HmXH9Aws5v5iPzCukiNGUlLfHITZAqFVLqvi2COg=
+github.com/sfomuseum/go-geojson-geotag v0.0.3 h1:XJCRXDb+SeVhyMHRz2MqOaUtTe2j3UDiMuzVmOlUgnA=
+github.com/sfomuseum/go-geojson-geotag v0.0.3/go.mod h1:KC3HmXH9Aws5v5iPzCukiNGUlLfHITZAqFVLqvi2COg=
 github.com/sfomuseum/go-http-leaflet-geotag v0.0.0-20200408190951-bda80bdc83f4 h1:07QxTAGS6K6gfOj3Y8GfUy+Jv5wAygFgMKoVxrhstpc=
 github.com/sfomuseum/go-http-leaflet-geotag v0.0.0-20200408190951-bda80bdc83f4/go.mod h1:R56pMAP2OHurz+bDFkYL3RgISj/SQw2mbgTmL9FZ8WQ=
 github.com/sfomuseum/go-http-leaflet-geotag v1.0.0 h1:LGW8CpUhwkQ7+4DewziLI5ueF1lUjOXY9v9Uywon8bA=
@@ -76,6 +78,8 @@ github.com/sfomuseum/go-www-geotag v0.0.0-20200413180115-389ef7ae07a0 h1:mBENSqP
 github.com/sfomuseum/go-www-geotag v0.0.0-20200413180115-389ef7ae07a0/go.mod h1:+Ux1l7qTHRtJ7mF1+ARkJgfcHTVTNtiKuDLRNl7s/9c=
 github.com/sfomuseum/go-www-geotag v0.0.0-20200413204623-fc11e6f94f1d h1:iLRf6wG8WY1U9fBrIY3CQvn7csO517sZ4IB/XSfHwwY=
 github.com/sfomuseum/go-www-geotag v0.0.0-20200413204623-fc11e6f94f1d/go.mod h1:9pMF8psqOoV8MJnSK6dzaTDa+8C6GXYcvMLuj3zgUMQ=
+github.com/sfomuseum/go-www-geotag v0.0.0-20200414002049-0d66988fb3a9 h1:XArYcj5I9eMcX0Su6FFiLEDS9mKqyMwYZ74cq7B4FMs=
+github.com/sfomuseum/go-www-geotag v0.0.0-20200414002049-0d66988fb3a9/go.mod h1:44J7K3LiS3CEz3RNlyXIUQJRuFmCZbnhAm9SDOWVtGg=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
