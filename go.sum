@@ -61,6 +61,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
 github.com/sfomuseum/go-flags v0.0.0-20200416180755-b77d83edf7f9 h1:9fAYKZ+t6mUUZAEj/A61To7cPhTu01pUBIF2v3mdCx4=
 github.com/sfomuseum/go-flags v0.0.0-20200416180755-b77d83edf7f9/go.mod h1:54KCZIGmvZkIOrSCHSNMvgSTKH2gJRJyISH+AiI+55w=
+github.com/sfomuseum/go-flags v0.0.2 h1:gdhf3A8oxHACAeFQpEHUplfLjkBCb6dILaftSSMD5Mk=
+github.com/sfomuseum/go-flags v0.0.2/go.mod h1:54KCZIGmvZkIOrSCHSNMvgSTKH2gJRJyISH+AiI+55w=
 github.com/sfomuseum/go-geojson-geotag v0.0.1 h1:tdcP9EIWHWbyQpsUuI2KMQdCY+NIMslaEJ78zTqw/w4=
 github.com/sfomuseum/go-geojson-geotag v0.0.1/go.mod h1:KC3HmXH9Aws5v5iPzCukiNGUlLfHITZAqFVLqvi2COg=
 github.com/sfomuseum/go-geojson-geotag v0.0.2 h1:2BOfA+0TWldxPewzxrjHgR7q6gYEEE4fhYZ6JURwS68=
@@ -101,6 +103,8 @@ github.com/sfomuseum/go-www-geotag v0.0.1 h1:I95RFhrSfzG+b/K+RzY6n6PwkEm47s6bsEq
 github.com/sfomuseum/go-www-geotag v0.0.1/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
 github.com/sfomuseum/go-www-geotag v0.0.2 h1:7IyTQN66NqNVuVNGP2lRTp1BAx14Y5b9FiXakXVt/ec=
 github.com/sfomuseum/go-www-geotag v0.0.2/go.mod h1:lYdpu70f7a+KIuM79jHNd/YfHs2eirvWSwKFi1SQuJw=
+github.com/sfomuseum/go-www-geotag v0.0.3 h1:YE/LcZh/Swz0x21+TfmqNqS6rS/R6t1wvvVMCAdBiYk=
+github.com/sfomuseum/go-www-geotag v0.0.3/go.mod h1:g6OSNSO2/YDAbRj6u/dnITE+d3Eoc43v8cJRQr3pkds=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
