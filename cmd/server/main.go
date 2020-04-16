@@ -6,8 +6,8 @@ import (
 
 import (
 	"context"
-	"github.com/sfomuseum/go-www-geotag/app"
 	"github.com/sfomuseum/go-flags"
+	"github.com/sfomuseum/go-www-geotag/app"
 	"log"
 	"net/http"
 )

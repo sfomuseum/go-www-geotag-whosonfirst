@@ -66,14 +66,26 @@ func NewWhosOnFirstGeotagWriter(ctx context.Context, uri string) (geotag_writer.
 		return nil, errors.New("Missing writer parameter")
 	}
 
-	wof_wr, err := writer.NewWriter(ctx, writer_uri)
+	if reader_uri == "" {
+		return nil, errors.New("Missing reader parameter")
+	}
+
+	writer_uri, err = url.QueryUnescape(writer_uri)
 
 	if err != nil {
 		return nil, err
 	}
 
-	if reader_uri == "" {
-		return nil, errors.New("Missing reader parameter")
+	reader_uri, err = url.QueryUnescape(reader_uri)
+
+	if err != nil {
+		return nil, err
+	}
+
+	wof_wr, err := writer.NewWriter(ctx, writer_uri)
+
+	if err != nil {
+		return nil, err
 	}
 
 	wof_rd, err := reader.NewReader(ctx, reader_uri)
