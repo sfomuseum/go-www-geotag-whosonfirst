@@ -19,6 +19,8 @@ github.com/aaronland/go-http-sanitize v0.0.1 h1:35rmeJh9Kx9mphGJXitQ6dOsC2fEPdn9
 github.com/aaronland/go-http-sanitize v0.0.1/go.mod h1:qUi4rzUPcpMntpUFnHK00yQI5vd/Q7x9MFYwX91/ygI=
 github.com/aaronland/go-http-server v0.0.0-20200406192045-de2f431abc6e h1:INXG9QbT9VzBS7k94MFRjbiCGXV87lMKJHwWXeMOOE8=
 github.com/aaronland/go-http-server v0.0.0-20200406192045-de2f431abc6e/go.mod h1:aLVlx8l+Tzrv1YmEDKKeomUj5vWzUfrbC1QB6WUxzN0=
+github.com/aaronland/go-http-server v0.0.1 h1:EwVy+yIzzvGLubffF0hUEdlKHfh3sD6wMHvF9hUorl0=
+github.com/aaronland/go-http-server v0.0.1/go.mod h1:i7CG6Q9iRKZX4qonIYr73GtJpVHV8T31eZ4Ug44zOTU=
 github.com/aaronland/go-http-tangramjs v0.0.6 h1:Ke2hU/flaO6hmK4AxH6ubKIEtqKItowqaWe4IA/3aFU=
 github.com/aaronland/go-http-tangramjs v0.0.6/go.mod h1:9gLqN7c67fdkshqG5wiSWFZkIJdtbC2uA5kdGGrhLyw=
 github.com/aaronland/go-londonintegers-api v0.1.0/go.mod h1:E0VIcwks+So4FL1FYAQzrO5/OVOUsFPsqW85UrZArSE=
@@ -57,6 +59,8 @@ github.com/paulmach/orb v0.1.6/go.mod h1:pPwxxs3zoAyosNSbNKn1jiXV2+oovRDObDKfTvR
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
+github.com/sfomuseum/go-flags v0.0.0-20200416180755-b77d83edf7f9 h1:9fAYKZ+t6mUUZAEj/A61To7cPhTu01pUBIF2v3mdCx4=
+github.com/sfomuseum/go-flags v0.0.0-20200416180755-b77d83edf7f9/go.mod h1:54KCZIGmvZkIOrSCHSNMvgSTKH2gJRJyISH+AiI+55w=
 github.com/sfomuseum/go-geojson-geotag v0.0.1 h1:tdcP9EIWHWbyQpsUuI2KMQdCY+NIMslaEJ78zTqw/w4=
 github.com/sfomuseum/go-geojson-geotag v0.0.1/go.mod h1:KC3HmXH9Aws5v5iPzCukiNGUlLfHITZAqFVLqvi2COg=
 github.com/sfomuseum/go-geojson-geotag v0.0.2 h1:2BOfA+0TWldxPewzxrjHgR7q6gYEEE4fhYZ6JURwS68=
@@ -95,6 +99,8 @@ github.com/sfomuseum/go-www-geotag v0.0.0-20200414222300-e955a66018b9 h1:3iflxeE
 github.com/sfomuseum/go-www-geotag v0.0.0-20200414222300-e955a66018b9/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
 github.com/sfomuseum/go-www-geotag v0.0.1 h1:I95RFhrSfzG+b/K+RzY6n6PwkEm47s6bsEqR9HJeI+E=
 github.com/sfomuseum/go-www-geotag v0.0.1/go.mod h1:aAoxI1DCKL2hLtWpzFJZxZnujyDL8OLwW/+uMkdzvNs=
+github.com/sfomuseum/go-www-geotag v0.0.2 h1:7IyTQN66NqNVuVNGP2lRTp1BAx14Y5b9FiXakXVt/ec=
+github.com/sfomuseum/go-www-geotag v0.0.2/go.mod h1:lYdpu70f7a+KIuM79jHNd/YfHs2eirvWSwKFi1SQuJw=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=

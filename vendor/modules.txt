@@ -15,7 +15,7 @@ github.com/aaronland/go-http-leaflet
 github.com/aaronland/go-http-rewrite
 # github.com/aaronland/go-http-sanitize v0.0.1
 github.com/aaronland/go-http-sanitize
-# github.com/aaronland/go-http-server v0.0.0-20200406192045-de2f431abc6e
+# github.com/aaronland/go-http-server v0.0.1
 github.com/aaronland/go-http-server
 # github.com/aaronland/go-http-tangramjs v0.0.6
 github.com/aaronland/go-http-tangramjs
@@ -50,6 +50,8 @@ github.com/paulmach/orb/internal/length
 github.com/paulmach/orb/internal/mercator
 github.com/paulmach/orb/maptile
 github.com/paulmach/orb/planar
+# github.com/sfomuseum/go-flags v0.0.0-20200416180755-b77d83edf7f9
+github.com/sfomuseum/go-flags
 # github.com/sfomuseum/go-geojson-geotag v0.0.3
 github.com/sfomuseum/go-geojson-geotag
 # github.com/sfomuseum/go-http-leaflet-geotag v1.0.0
@@ -60,11 +62,10 @@ github.com/sfomuseum/go-http-leaflet-layers
 github.com/sfomuseum/go-http-tilezen/http
 # github.com/sfomuseum/go-tilezen v0.0.3
 github.com/sfomuseum/go-tilezen
-# github.com/sfomuseum/go-www-geotag v0.0.1
+# github.com/sfomuseum/go-www-geotag v0.0.2
 github.com/sfomuseum/go-www-geotag/api
 github.com/sfomuseum/go-www-geotag/app
 github.com/sfomuseum/go-www-geotag/assets/templates
-github.com/sfomuseum/go-www-geotag/flags
 github.com/sfomuseum/go-www-geotag/geo
 github.com/sfomuseum/go-www-geotag/writer
 github.com/sfomuseum/go-www-geotag/www
