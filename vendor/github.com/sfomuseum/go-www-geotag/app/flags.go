@@ -8,27 +8,27 @@ import (
 
 func CommonFlags() (*flag.FlagSet, error) {
 
-	fs := flags.NewFlagSet("common")
+	fs := flags.NewFlagSet("geotag")
 
-	fs.String("server-uri", "http://localhost:8080", "...")
+	fs.String("server-uri", "http://localhost:8080", "A valid aaronland/go-http-server.Server URI for creating an application server.")
 
-	fs.String("path-templates", "", "...")
+	fs.String("path-templates", "", "Path to a directory containing custom templates. If empty built-in templates will be used.")
 
-	fs.Bool("enable-placeholder", false, "...")
-	fs.String("placeholder-endpoint", "", "...")
+	fs.Bool("enable-placeholder", false, "Enable use of the Placeholder API for location searches.")
+	fs.String("placeholder-endpoint", "", "A valid Placeholder API endpoint to query.")
 
-	fs.Bool("enable-oembed", false, "...")
-	fs.String("oembed-endpoints", "", "...")
+	fs.Bool("enable-oembed", false, "Enable oEmbed lookups for images.")
+	fs.String("oembed-endpoints", "", "A comma-separated list of valid oEmbed endpoints to query.")
 
-	fs.Bool("enable-writer", false, "...")
-	fs.String("writer-uri", "stdout://", "...")
+	fs.Bool("enable-writer", false, "Enable output of the leaflet-geotag plugin to be written to a go-www-geotag/writer.Writer instance.")
+	fs.String("writer-uri", "stdout://", "A valid go-www-geotag/writer.Writer URI for creating a writer.Writer instance.")
 
-	fs.Bool("enable-map-layers", false, "...")
+	fs.Bool("enable-map-layers", false, "Enable use of the leaflet-layers-control Leaflet control element for custom custom map overlays.")
 
-	fs.String("path-editor", "/", "...")
-	fs.String("path-writer", "/update", "...")
+	fs.String("path-editor", "/", "A relative path for the geotag editor application.")
+	fs.String("path-writer", "/update", "A relative path for sending write updates.")
 
-	fs.String("crumb-dsn", "", "...")
+	fs.String("crumb-uri", "", "A valid aaronland/go-http-crumb.Crumb URI for generating (CSRF) crumbs.")
 
 	err := AppendLeafletFlags(fs)
 
@@ -57,8 +57,8 @@ func CommonFlags() (*flag.FlagSet, error) {
 func AppendNextzenFlags(fs *flag.FlagSet) error {
 
 	fs.String("nextzen-apikey", "", "A valid Nextzen API key")
-	fs.String("nextzen-style-url", "/tangram/refill-style.zip", "...")
-	fs.String("nextzen-tile-url", tangramjs.NEXTZEN_MVT_ENDPOINT, "...")
+	fs.String("nextzen-style-url", "/tangram/refill-style.zip", "A valid URL for loading a Tangram.js style bundle.")
+	fs.String("nextzen-tile-url", tangramjs.NEXTZEN_MVT_ENDPOINT, "A valid Nextzen tile URL template for loading map tiles.")
 
 	return nil
 }
@@ -68,7 +68,7 @@ func AppendNextzenFlags(fs *flag.FlagSet) error {
 
 func AppendTilezenFlags(fs *flag.FlagSet) error {
 
-	fs.Bool("enable-proxy-tiles", false, "...")
+	fs.Bool("enable-proxy-tiles", false, "Enable the use of a local tile proxy for Nextzen map tiles.")
 
 	fs.String("path-proxy-tiles", "/tiles/", "The URL (a relative path) for proxied tiles.")
 	fs.String("proxy-tiles-cache-uri", "gocache://", "A valid tile proxy DSN string.")
@@ -83,9 +83,9 @@ func AppendTilezenFlags(fs *flag.FlagSet) error {
 
 func AppendLeafletFlags(fs *flag.FlagSet) error {
 
-	fs.Float64("initial-latitude", 37.61799, "...")
-	fs.Float64("initial-longitude", -122.370943, "...")
-	fs.Int("initial-zoom", 14, "...")
+	fs.Float64("initial-latitude", 37.61799, "A valid latitude for the map's initial view.")
+	fs.Float64("initial-longitude", -122.370943, "A valid longitude for the map's initial view.")
+	fs.Int("initial-zoom", 14, "A valid zoom level for the map's initial view.")
 
 	return nil
 }
