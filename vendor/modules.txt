@@ -49,7 +49,7 @@ github.com/paulmach/orb/internal/length
 github.com/paulmach/orb/internal/mercator
 github.com/paulmach/orb/maptile
 github.com/paulmach/orb/planar
-# github.com/sfomuseum/go-flags v0.0.2
+# github.com/sfomuseum/go-flags v0.0.4
 github.com/sfomuseum/go-flags
 # github.com/sfomuseum/go-geojson-geotag v0.0.3
 github.com/sfomuseum/go-geojson-geotag
@@ -61,7 +61,7 @@ github.com/sfomuseum/go-http-leaflet-layers
 github.com/sfomuseum/go-http-tilezen/http
 # github.com/sfomuseum/go-tilezen v0.0.3
 github.com/sfomuseum/go-tilezen
-# github.com/sfomuseum/go-www-geotag v0.0.4
+# github.com/sfomuseum/go-www-geotag v0.0.5
 github.com/sfomuseum/go-www-geotag/api
 github.com/sfomuseum/go-www-geotag/app
 github.com/sfomuseum/go-www-geotag/assets/templates
