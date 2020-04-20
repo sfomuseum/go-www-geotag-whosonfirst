@@ -27,6 +27,8 @@ github.com/aaronland/go-http-server v0.0.1 h1:EwVy+yIzzvGLubffF0hUEdlKHfh3sD6wMH
 github.com/aaronland/go-http-server v0.0.1/go.mod h1:i7CG6Q9iRKZX4qonIYr73GtJpVHV8T31eZ4Ug44zOTU=
 github.com/aaronland/go-http-server v0.0.2 h1:N2V3NVXOoYL3iEwXAd9d1A39e3z7+9lGlyjXvwOT5YI=
 github.com/aaronland/go-http-server v0.0.2/go.mod h1:i7CG6Q9iRKZX4qonIYr73GtJpVHV8T31eZ4Ug44zOTU=
+github.com/aaronland/go-http-server v0.0.3 h1:VyiOxUqgJccamLQNOx7p0D3qE9K5RUe3TKe8vy3gZa4=
+github.com/aaronland/go-http-server v0.0.3/go.mod h1:i7CG6Q9iRKZX4qonIYr73GtJpVHV8T31eZ4Ug44zOTU=
 github.com/aaronland/go-http-tangramjs v0.0.6 h1:Ke2hU/flaO6hmK4AxH6ubKIEtqKItowqaWe4IA/3aFU=
 github.com/aaronland/go-http-tangramjs v0.0.6/go.mod h1:9gLqN7c67fdkshqG5wiSWFZkIJdtbC2uA5kdGGrhLyw=
 github.com/aaronland/go-londonintegers-api v0.1.0/go.mod h1:E0VIcwks+So4FL1FYAQzrO5/OVOUsFPsqW85UrZArSE=
@@ -121,6 +123,8 @@ github.com/sfomuseum/go-www-geotag v0.0.4 h1:v2qGrw7ieCLU3L4yQVcx5K1TyVVC6QaBUxh
 github.com/sfomuseum/go-www-geotag v0.0.4/go.mod h1:VL9FZcXeVCiMZm6X9Xf+IR7iMXGddGbNw2/pNMUxbpI=
 github.com/sfomuseum/go-www-geotag v0.0.5 h1:yOeWBdtNMVzFX1MX0NTRBsfL5TVjbRDUS40Q8UcRHy8=
 github.com/sfomuseum/go-www-geotag v0.0.5/go.mod h1:uZhvVzp+j3HmPdx36x8OJSaIbkCtGcV6GBV7QTdCOKs=
+github.com/sfomuseum/go-www-geotag v0.0.6 h1:xtAnBRy241anvwrxukDr6y2D7jiJRtj1ujAOOxWYtj8=
+github.com/sfomuseum/go-www-geotag v0.0.6/go.mod h1:liEHrKy2yQZQHlNhr8kkZcmftsThhbZjUAJ14EH1U9I=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
