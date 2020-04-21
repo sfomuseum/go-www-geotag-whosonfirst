@@ -12,6 +12,8 @@ github.com/aaronland/go-http-crumb v0.0.5 h1:ZhBkvWUW9wsw+KYnOu0sHAeRpsfY9kj0wh7
 github.com/aaronland/go-http-crumb v0.0.5/go.mod h1:tzp6zHKE/pojVXQhcS1J5x5qQkhhxOTvJS2N7S1VVuY=
 github.com/aaronland/go-http-crumb v0.0.6 h1:R+hGU1SdkKxLqKIuabBwXpemo7VqFaCVYg4YK13JOnw=
 github.com/aaronland/go-http-crumb v0.0.6/go.mod h1:mf4QGr+5Mraf6ta1CwLJHSe31yWgDgmM8OxcLilnrpY=
+github.com/aaronland/go-http-crumb v0.1.0 h1:YfsCDZMZQWvkBvrre5TVrA1Kbkmxc3ZzbpDej/vCX8E=
+github.com/aaronland/go-http-crumb v0.1.0/go.mod h1:/9rG/lnTmpoVDr4gv2m9zCJjvgrscnntKmgY9l5PYEo=
 github.com/aaronland/go-http-leaflet v0.0.3 h1:moAjSThtakdpdZ9zr6po11XeIyksYfe+BaH+tfdrnsM=
 github.com/aaronland/go-http-leaflet v0.0.3/go.mod h1:jUzEnGKezjceuNtQJIZWy2nXMhuteRSK0BPIjSSniBw=
 github.com/aaronland/go-http-rewrite v0.0.3/go.mod h1:g62jjXpsArD0lzJLs9bVLR9Locdt3f4OmqFkkJL2rQU=
@@ -125,6 +127,8 @@ github.com/sfomuseum/go-www-geotag v0.0.5 h1:yOeWBdtNMVzFX1MX0NTRBsfL5TVjbRDUS40
 github.com/sfomuseum/go-www-geotag v0.0.5/go.mod h1:uZhvVzp+j3HmPdx36x8OJSaIbkCtGcV6GBV7QTdCOKs=
 github.com/sfomuseum/go-www-geotag v0.0.6 h1:xtAnBRy241anvwrxukDr6y2D7jiJRtj1ujAOOxWYtj8=
 github.com/sfomuseum/go-www-geotag v0.0.6/go.mod h1:liEHrKy2yQZQHlNhr8kkZcmftsThhbZjUAJ14EH1U9I=
+github.com/sfomuseum/go-www-geotag v0.0.7 h1:3wQ2N2e2/APHxcgI0xQK0123iCv/YZJkmp490YRqG/w=
+github.com/sfomuseum/go-www-geotag v0.0.7/go.mod h1:Xy9PlbKSc3IEmxejssttiYAfoCYk6va5s1P51uKaDo4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=

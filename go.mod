@@ -5,7 +5,7 @@ go 1.12
 require (
 	github.com/sfomuseum/go-flags v0.0.4
 	github.com/sfomuseum/go-geojson-geotag v0.0.3
-	github.com/sfomuseum/go-www-geotag v0.0.6
+	github.com/sfomuseum/go-www-geotag v0.0.7
 	github.com/tidwall/gjson v1.6.0
 	github.com/tidwall/sjson v1.1.1
 	github.com/tomtaylor/go-whosonfirst-format v0.2.0
