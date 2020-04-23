@@ -91,6 +91,8 @@ github.com/sfomuseum/go-http-leaflet-layers v0.0.0-20200414210451-02713825ca94 h
 github.com/sfomuseum/go-http-leaflet-layers v0.0.0-20200414210451-02713825ca94/go.mod h1:y44/bRbzZikkm26+0exD2nkJ8SGsOpQmXT1NM/R58iE=
 github.com/sfomuseum/go-http-leaflet-layers v0.0.1 h1:o5qCG4Xp/wuO4uJ+3V+nKXqOH/iv4ziIPLTQsgXSozw=
 github.com/sfomuseum/go-http-leaflet-layers v0.0.1/go.mod h1:y44/bRbzZikkm26+0exD2nkJ8SGsOpQmXT1NM/R58iE=
+github.com/sfomuseum/go-http-leaflet-layers v0.0.2 h1:+50AXlMioejRz4K+KKs0+MiaopiP1ehnHlcc4OTHRrk=
+github.com/sfomuseum/go-http-leaflet-layers v0.0.2/go.mod h1:y44/bRbzZikkm26+0exD2nkJ8SGsOpQmXT1NM/R58iE=
 github.com/sfomuseum/go-http-tilezen v0.0.4 h1:VtgK1o0e4orgLthumMLZ3NcZHHJakixRMPphmSGiKDQ=
 github.com/sfomuseum/go-http-tilezen v0.0.4/go.mod h1:3KWUDN2cHiSWjRaI4wrt5FKa/EEsNcsOeh5GIgWTrBw=
 github.com/sfomuseum/go-tilezen v0.0.3 h1:B6BSBHTtno1MvtTMyNRhIK+MMaBQOml0AFoz+Uw8u5o=
@@ -129,6 +131,8 @@ github.com/sfomuseum/go-www-geotag v0.0.6 h1:xtAnBRy241anvwrxukDr6y2D7jiJRtj1ujA
 github.com/sfomuseum/go-www-geotag v0.0.6/go.mod h1:liEHrKy2yQZQHlNhr8kkZcmftsThhbZjUAJ14EH1U9I=
 github.com/sfomuseum/go-www-geotag v0.0.7 h1:3wQ2N2e2/APHxcgI0xQK0123iCv/YZJkmp490YRqG/w=
 github.com/sfomuseum/go-www-geotag v0.0.7/go.mod h1:Xy9PlbKSc3IEmxejssttiYAfoCYk6va5s1P51uKaDo4=
+github.com/sfomuseum/go-www-geotag v0.0.8 h1:ImwyjWFFvpI7SvZmGc2ZM7THPstoWfF8PCFvOZ9ABpc=
+github.com/sfomuseum/go-www-geotag v0.0.8/go.mod h1:3M64Idx4/mXeKuOJUxTFPw58d3eTXdFMEcDVFvgUApo=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
