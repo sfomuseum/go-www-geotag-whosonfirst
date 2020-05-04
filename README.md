@@ -2,9 +2,11 @@
 
 ![](docs/images/geotag-wof.png)
 
+A web application, written in Go, for geotagging images with support for Who's On First output.
+
 ## Important
 
-This is work in progress, including the documentation. In the meantime please have a look at the [Geotagging at SFO Museum](https://millsfield.sfomuseum.org/blog/tags/geotagging) series of blog posts.
+This is work in progress, including the documentation. In the meantime please have a look at the [Geotagging at SFO Museum](https://millsfield.sfomuseum.org/blog/tags/geotagging) series of blog posts and the [Geotagging at SFO Museum, Part 7 – Custom Writers](https://millsfield.sfomuseum.org/blog/2020/05/01/geotagging-custom-writers/) post in particular.
 
 ## Tools
 
