@@ -59,9 +59,9 @@ This is work in progress, including the documentation. In the meantime please ha
   -server-uri string
     	A valid aaronland/go-http-server.Server URI for creating an application server. (default "http://localhost:8080")
   -whosonfirst-reader-uri string
-    	A valid whosonfirst/go-reader.Reader URI. If present it will be encoded and used to replace the '{READER}' string in the -writer-uri flag.
+    	A valid whosonfirst/go-reader.Reader URI. If present it will be encoded and used to replace the '{whosonfirst_reader}' string in the -writer-uri flag.
   -whosonfirst-writer-uri string
-    	A valid whosonfirst/go-writer.Writer URI. If present it will be encoded and used to replace the '{WRITER}' string in the -writer-uri flag.
+    	A valid whosonfirst/go-writer.Writer URI. If present it will be encoded and used to replace the '{whosonfirst_writer}' string in the -writer-uri flag.
   -writer-uri string
     	A valid go-www-geotag/writer.Writer URI for creating a writer.Writer instance. (default "stdout://")
 ```
