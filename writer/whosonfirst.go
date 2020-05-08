@@ -131,6 +131,18 @@ func NewWhosOnFirstGeotagWriter(ctx context.Context, uri string) (geotag_writer.
 
 func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string, geotag_f *geotag.GeotagFeature) error {
 
+	io_wr, err := geotag_writer.GetIOWriterFromContext(ctx)
+
+	if err == nil {
+
+		ctx, err = writer.SetIOWriterWithContext(ctx, io_wr)
+
+		if err != nil {
+			return err
+		}
+		
+	}
+	
 	// for local debugging
 	// uri = "1511948897"
 

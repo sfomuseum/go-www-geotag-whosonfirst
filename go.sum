@@ -139,6 +139,8 @@ github.com/sfomuseum/go-www-geotag v0.0.8 h1:ImwyjWFFvpI7SvZmGc2ZM7THPstoWfF8PCF
 github.com/sfomuseum/go-www-geotag v0.0.8/go.mod h1:3M64Idx4/mXeKuOJUxTFPw58d3eTXdFMEcDVFvgUApo=
 github.com/sfomuseum/go-www-geotag v0.0.11 h1:k6ZDM+hiPzlJ7ImmUF47ftsGWMSmgKYLDyRZziKmEF4=
 github.com/sfomuseum/go-www-geotag v0.0.11/go.mod h1:UYuBUWO3dYKvMEJmQyemUp1Zi05cb1E3SO7aPWhJOQI=
+github.com/sfomuseum/go-www-geotag v0.0.12 h1:C6zt3khGwZzXUE3dK3dZfg5XVNcrtgxFEGmfujDKuY0=
+github.com/sfomuseum/go-www-geotag v0.0.12/go.mod h1:UYuBUWO3dYKvMEJmQyemUp1Zi05cb1E3SO7aPWhJOQI=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
@@ -183,6 +185,8 @@ github.com/whosonfirst/go-whosonfirst-uri v0.2.0 h1:iODHdyvW+8IXqHZTixZ/9GEZy1dV
 github.com/whosonfirst/go-whosonfirst-uri v0.2.0/go.mod h1:8eaDVcc4v+HHHEDaRbApdmhPwM4/JQllw2PktvZcPVs=
 github.com/whosonfirst/go-writer v0.1.0 h1:TAb2++rpGcxlqvtCMMTuBzb3PXFQzGobpFB62WUPfQU=
 github.com/whosonfirst/go-writer v0.1.0/go.mod h1:NGPaud/M3Q6IKLDj2X0PbKKpfWRF9Zneups/BMCG0+0=
+github.com/whosonfirst/go-writer v0.2.0 h1:3RCym51cVwbhTpAZ7XKoWsXcodbEbKGDWYUpHoXyEOQ=
+github.com/whosonfirst/go-writer v0.2.0/go.mod h1:NGPaud/M3Q6IKLDj2X0PbKKpfWRF9Zneups/BMCG0+0=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/net v0.0.0-20190613194153-d28f0bde5980/go.mod h1:z5CRVTTTmAJ677TzLLGU+0bjPO0LkuOLi4/5GtJWs/s=
 golang.org/x/net v0.0.0-20190628185345-da137c7871d7 h1:rTIdg5QFRR7XCaK4LCjBiPbx8j4DQRpdYMnGn/bJUEU=

@@ -61,7 +61,7 @@ github.com/sfomuseum/go-http-leaflet-layers
 github.com/sfomuseum/go-http-tilezen/http
 # github.com/sfomuseum/go-tilezen v0.0.3
 github.com/sfomuseum/go-tilezen
-# github.com/sfomuseum/go-www-geotag v0.0.11
+# github.com/sfomuseum/go-www-geotag v0.0.12
 github.com/sfomuseum/go-www-geotag/api
 github.com/sfomuseum/go-www-geotag/app
 github.com/sfomuseum/go-www-geotag/assets/templates
@@ -101,7 +101,7 @@ github.com/whosonfirst/go-whosonfirst-sources
 github.com/whosonfirst/go-whosonfirst-sources/sources
 # github.com/whosonfirst/go-whosonfirst-uri v0.2.0
 github.com/whosonfirst/go-whosonfirst-uri
-# github.com/whosonfirst/go-writer v0.1.0
+# github.com/whosonfirst/go-writer v0.2.0
 github.com/whosonfirst/go-writer
 # golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 golang.org/x/net/html
