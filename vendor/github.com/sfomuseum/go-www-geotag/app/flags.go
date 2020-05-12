@@ -14,6 +14,8 @@ func CommonFlags() (*flag.FlagSet, error) {
 
 	fs.String("path-templates", "", "Path to a directory containing custom templates. If empty built-in templates will be used.")
 
+	fs.Bool("enable-editor", true, "Enable the geotagging editor interface.")
+
 	fs.Bool("enable-placeholder", false, "Enable use of the Placeholder API for location searches.")
 	fs.String("placeholder-endpoint", "", "A valid Placeholder API endpoint to query.")
 
@@ -23,7 +25,10 @@ func CommonFlags() (*flag.FlagSet, error) {
 	fs.Bool("enable-writer", false, "Enable output of the leaflet-geotag plugin to be written to a go-www-geotag/writer.Writer instance.")
 	fs.String("writer-uri", "stdout://", "A valid go-www-geotag/writer.Writer URI for creating a writer.Writer instance.")
 
-	fs.Bool("disable-writer-crumb", false, "Do not require a valid CSRF crumb for all writes")
+	fs.Bool("disable-writer-crumb", false, "Do not require a valid CSRF crumb for all writes.")
+
+	fs.Bool("enable-writer-cors", false, "Enable CORS support for the writer endpoint.")
+	fs.String("writer-cors-allowed-origins", "*", "A comma-separated list of origins to allow for CORS support.")
 
 	fs.Bool("enable-map-layers", false, "Enable use of the leaflet-layers-control Leaflet control element for custom custom map overlays.")
 

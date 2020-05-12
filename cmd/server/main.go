@@ -51,7 +51,7 @@ func main() {
 		log.Fatalf("Failed to append asset handlers, %v", err)
 	}
 
-	err = app.AppendEditorHandler(ctx, fs, mux)
+	err = app.AppendEditorHandlerIfEnabled(ctx, fs, mux)
 
 	if err != nil {
 		log.Fatalf("Failed to append editor handler, %v", err)
