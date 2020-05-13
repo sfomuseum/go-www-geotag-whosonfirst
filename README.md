@@ -16,6 +16,10 @@ This is work in progress, including the documentation. In the meantime please ha
 > ./bin/server -h
   -crumb-uri string
     	A valid aaronland/go-http-crumb.Crumb URI for generating (CSRF) crumbs. If the value is 'auto' then a random crumb URI will be generated. (default "auto")
+  -disable-writer-crumb
+    	Do not require a valid CSRF crumb for all writes.
+  -enable-editor
+    	Enable the geotagging editor interface. (default true)
   -enable-map-layers
     	Enable use of the leaflet-layers-control Leaflet control element for custom custom map overlays.
   -enable-oembed
@@ -26,6 +30,8 @@ This is work in progress, including the documentation. In the meantime please ha
     	Enable the use of a local tile proxy for Nextzen map tiles.
   -enable-writer
     	Enable output of the leaflet-geotag plugin to be written to a go-www-geotag/writer.Writer instance.
+  -enable-writer-cors
+    	Enable CORS support for the writer endpoint.
   -initial-latitude float
     	A valid latitude for the map's initial view. (default 37.61799)
   -initial-longitude float
@@ -62,6 +68,8 @@ This is work in progress, including the documentation. In the meantime please ha
     	A valid whosonfirst/go-reader.Reader URI. If present it will be encoded and used to replace the '{whosonfirst_reader}' string in the -writer-uri flag.
   -whosonfirst-writer-uri string
     	A valid whosonfirst/go-writer.Writer URI. If present it will be encoded and used to replace the '{whosonfirst_writer}' string in the -writer-uri flag.
+  -writer-cors-allowed-origins string
+    	A comma-separated list of origins to allow for CORS support. (default "*")
   -writer-uri string
     	A valid go-www-geotag/writer.Writer URI for creating a writer.Writer instance. (default "stdout://")
 ```
