@@ -21,7 +21,7 @@ github.com/aaronland/go-http-server
 github.com/aaronland/go-http-tangramjs
 # github.com/aaronland/go-pool v0.0.0-20191128211702-88306299c758
 github.com/aaronland/go-pool
-# github.com/aaronland/go-roster v0.0.1
+# github.com/aaronland/go-roster v0.0.2
 github.com/aaronland/go-roster
 # github.com/aaronland/go-string v0.1.2
 github.com/aaronland/go-string/random
@@ -86,7 +86,7 @@ github.com/whosonfirst/algnhsa
 github.com/whosonfirst/go-bindata-assetfs
 # github.com/whosonfirst/go-cache v0.0.2
 github.com/whosonfirst/go-cache
-# github.com/whosonfirst/go-reader v0.1.1
+# github.com/whosonfirst/go-reader v0.2.0
 github.com/whosonfirst/go-reader
 # github.com/whosonfirst/go-sanitize v0.1.0
 github.com/whosonfirst/go-sanitize
