@@ -140,9 +140,9 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 		if err != nil {
 			return err
 		}
-		
+
 	}
-	
+
 	// for local debugging
 	// uri = "1511948897"
 
