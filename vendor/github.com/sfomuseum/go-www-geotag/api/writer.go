@@ -36,6 +36,8 @@ func WriterHandler(wr writer.Writer) (http.Handler, error) {
 			return
 		}
 
+		rsp.Header().Set("Content-Type", "application/json")
+
 		ctx := req.Context()
 
 		ctx, err = writer.SetIOWriterWithContext(ctx, rsp)
@@ -46,6 +48,13 @@ func WriterHandler(wr writer.Writer) (http.Handler, error) {
 		}
 
 		err = wr.WriteFeature(ctx, uid, geotag_f)
+
+		if err != nil {
+			http.Error(rsp, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		err = wr.Close(ctx)
 
 		if err != nil {
 			http.Error(rsp, err.Error(), http.StatusInternalServerError)

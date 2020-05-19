@@ -341,6 +341,10 @@ func (wr *WhosOnFirstGeotagWriter) WriteFeature(ctx context.Context, uri string,
 	return nil
 }
 
+func (wr *WhosOnFirstGeotagWriter) Close(ctx context.Context) error {
+	return nil
+}
+
 func FormatAltFeature(f *WhosOnFirstAltFeature) ([]byte, error) {
 
 	// please standardize on a common whosonfirst geojson/feature package

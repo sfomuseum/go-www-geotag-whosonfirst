@@ -2,7 +2,7 @@ package flags
 
 import (
 	"flag"
-	sfom_flags "github.com/sfomuseum/go-flags"
+	"github.com/sfomuseum/go-flags/lookup"
 	"net/url"
 	"strings"
 )
@@ -17,13 +17,13 @@ func AppendWhosOnFirstFlags(fs *flag.FlagSet) error {
 
 func AssignWhosOnFirstFlags(fs *flag.FlagSet) error {
 
-	wof_writer, err := sfom_flags.StringVar(fs, "whosonfirst-writer-uri")
+	wof_writer, err := lookup.StringVar(fs, "whosonfirst-writer-uri")
 
 	if err != nil {
 		return err
 	}
 
-	wof_reader, err := sfom_flags.StringVar(fs, "whosonfirst-reader-uri")
+	wof_reader, err := lookup.StringVar(fs, "whosonfirst-reader-uri")
 
 	if err != nil {
 		return err
@@ -31,7 +31,7 @@ func AssignWhosOnFirstFlags(fs *flag.FlagSet) error {
 
 	if wof_writer != "" || wof_writer != "" {
 
-		writer_uri, err := sfom_flags.StringVar(fs, "writer-uri")
+		writer_uri, err := lookup.StringVar(fs, "writer-uri")
 
 		if err != nil {
 			return err

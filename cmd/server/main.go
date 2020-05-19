@@ -6,7 +6,7 @@ import (
 
 import (
 	"context"
-	"github.com/sfomuseum/go-flags"
+	"github.com/sfomuseum/go-flags/flagset"
 	wof_app "github.com/sfomuseum/go-www-geotag-whosonfirst/app"
 	"github.com/sfomuseum/go-www-geotag/app"
 	"log"
@@ -29,9 +29,9 @@ func main() {
 		log.Fatalf("Failed to append Who's On First flags, %v", err)
 	}
 
-	flags.Parse(fs)
+	flagset.Parse(fs)
 
-	err = flags.SetFlagsFromEnvVars(fs, "GEOTAG")
+	err = flagset.SetFlagsFromEnvVars(fs, "GEOTAG")
 
 	if err != nil {
 		log.Fatalf("Failed to set flags from env vars, %v", err)
