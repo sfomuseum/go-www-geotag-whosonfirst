@@ -155,6 +155,8 @@ github.com/sfomuseum/go-www-geotag v0.0.15 h1:WWMV5mHfwpdO9IF0jJ5YAQkmErwJG13k+6
 github.com/sfomuseum/go-www-geotag v0.0.15/go.mod h1:ukqqJ5/0Z1bE867y2UiDq1C7aSYx7OgtkMOiARHp3Iw=
 github.com/sfomuseum/go-www-geotag v0.0.16 h1:LRYB6sOauw/yKRFJlD5z/K6bFsEaktXmHKzUOL62LZc=
 github.com/sfomuseum/go-www-geotag v0.0.16/go.mod h1:Aw8cw3vRSWIBcBbjaQftEVk2kqPlSTqVRbw0BwGFUj8=
+github.com/sfomuseum/go-www-geotag v0.0.17 h1:FuJpwjO0MyP+7sCnGUykHRFtR7nz4N4PKk5ifLQkIc4=
+github.com/sfomuseum/go-www-geotag v0.0.17/go.mod h1:Aw8cw3vRSWIBcBbjaQftEVk2kqPlSTqVRbw0BwGFUj8=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
